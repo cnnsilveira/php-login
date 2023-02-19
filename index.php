@@ -10,6 +10,15 @@
     <title>Caio Nunes</title>
 </head>
 <body>
-    <?php echo $var; ?>
+    <form method="get">
+        <input type="text" name="name">
+        <input type="password" name="password">
+        <input type="submit">
+    </form>
+    <?php $check = $_GET['name'] == 'admin' && $_GET['password'] == 'admin'; ?>
+    <span style="font-size: 24px; font-weight: 600; color: <?php echo ($check ? 'green' : 'red'); ?>">
+        <?php echo ($check ? 'LOGGED IN!' : 'LOGIN FAILED')?>
+    </span>
+
 </body>
 </html>
