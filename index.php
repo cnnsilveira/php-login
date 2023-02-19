@@ -1,3 +1,5 @@
+<?php require_once('functions.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,6 @@
     <title>Caio Nunes</title>
 </head>
 <body>
-    <h1>Wasdsadasadsdsa</h1>
+    <?php echo $var; ?>
 </body>
 </html>
