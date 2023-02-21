@@ -29,7 +29,6 @@
         <div class="login-right-container centered-flex">
             <div class="right-container-inner">
                 <div class="welcome-wrap">
-
                     <h1>Welcome!</h1>
                     <p>This is a PHP Login Authentication page. You may want to test it using <a href="#" style="color: #ee7c20">guest</a> for both Username and Password fields or just <a href="#" style="color: #128be7">skip it</a> clicking the button below.</p>
                 </div>
@@ -52,7 +51,6 @@
 
                             } elseif (!$_POST['name'] && $_POST['password']) {
                                 echo "User not found";
-
                             } elseif ($_POST['name'] && $_POST['password']) {
 
                                 if (array_key_exists($_POST['name'], $users)) {
@@ -61,19 +59,19 @@
                                     if (!$_POST['password']) {
                                         echo "Password required";
                                     } elseif ($_POST['password'] != $users[$_POST['name']]['password']) {
-                                        echo "Wrong password";
+                                        echo "Wrong password! Try again or <a href='#' style='color: #128be7'>skip it</a>.";
                                     } else {
                                         $logged_in = true;
+                                        echo "Logged in";
                                     }
-
-                                
                                 } else {
                                     // User not found
                                     echo "User not found";
                                 }
-                                        
+                                
                             }
                             $new_f5_check = random_int(0, 100);
+                            unset($_POST);
                             // echo $new_f5_check." - new <br>";
                             // echo $old_f5_check." - old";
                         ?>

@@ -40,12 +40,13 @@ main {
     position: absolute;
     right: 0;
     width: 40%;
+    max-width: 500px;
     height: 100%;
     background: #333;
-    padding: 0 30px;
+    padding: 0 40px;
 }
 .welcome-wrap {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .welcome-wrap h1 {
     margin-bottom: 30px !important;
@@ -58,7 +59,6 @@ main {
     font-size: .9rem;
     line-height: 1.5rem;
 }
-
 
 form input:not(input[type='submit']) {
     width: 100%;
@@ -103,6 +103,7 @@ form a[role='button']::selection {
 }
 
 .span-wrap {
+    margin-top: 10px;
     min-height: 20px;
 }
 
@@ -122,17 +123,27 @@ form a[role='button']::selection {
     margin-right: 5px;
 }
 
-
-/*****************************************************************/
-/*****************************************************************/
-/*****************************************************************/
-/*****************************************************************/
-/*****************************************************************/
-br, b {
-    display: none;
+@media screen and (max-width: 1199px) {
+    .login-left-container {
+        background-size: cover;
+        background-position: center;
+    }
+    .login-right-container {
+        position: relative;
+        height: fit-content;
+        padding: 30px 50px;
+        width: 50%;
+    }
 }
-/*****************************************************************/
-/*****************************************************************/
-/*****************************************************************/
-/*****************************************************************/
-/*****************************************************************/
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 30px;
+    }
+    .login-right-container {
+        width: 100%;
+    }
+    * {
+        font-size: 50%;
+    }
+} 
