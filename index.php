@@ -31,7 +31,7 @@
                             <a href="<?php echo $_SERVER['DOCUMENT_ROOT'].'/redirect.php';?>" role="button">Skip</a>
                             <?php 
                             
-                            if ($_POST['name'] == 'Caio' && $_POST['password'] == 'cnshu3br') {
+                            if (($_SERVER['REQUEST_METHOD'] == 'POST') && ($_POST['name'] == 'Caio' && $_POST['password'] == 'cnshu3br')) {
                                 $_SESSION['logged_in'] = true;
                             }
                             
