@@ -6,9 +6,6 @@
     margin: 0;
     color: #fff;
 }
-*:not(.login-left-container) {
-    transition: 250ms;
-}
 *::selection {
     background-color: #fff;
     color: #333;
@@ -86,6 +83,7 @@ form a[role='button'] {
     width: calc(50% - 5px);
     text-align: center;
     display: inline-block;
+    transition: 250ms;
 }
 form input[type='submit']:hover {
     background: #ea8f45;
@@ -110,7 +108,7 @@ form a[role='button']::selection {
 .social-icons-wrap {
     position: absolute;
     bottom: 30px;
-    right: 30px;
+    right: 40px;
 }
 .social-icons-wrap i {
     font-size: 25px;
