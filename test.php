@@ -1,8 +1,10 @@
-<?php 
-    require_once($_SERVER['DOCUMENT_ROOT'.'/config.php']);
-    if (!$_SESSION['logged_in']) {
-        header('Location: '.$_SERVER['DOCUMENT_ROOT']);
-    }
+<?php
+
+require_once($_SERVER['DOCUMENT_ROOT'.'/config.php']);
+if (!$_SESSION['logged_in']) {
+    header('Location: '.$_SERVER['DOCUMENT_ROOT']);
+}
+
 ?>
 
 <!DOCTYPE html>
