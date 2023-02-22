@@ -2,7 +2,7 @@
 
 require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');
 if (!$_SESSION['logged_in']) {
-    header('Location: caionunes.site');
+    header('Location: https://caionunes.site');
 }
 
 ?>

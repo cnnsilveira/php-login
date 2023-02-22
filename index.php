@@ -28,7 +28,7 @@
                         <input type="password" name="password" placeholder="Password" autocomplete="off">
                         <div class="btn-wrap">
                             <input type="submit" value="Log In">
-                            <a href="caionunes.site/redirected.php" role="button">Skip</a>
+                            <a href="https://caionunes.site/redirected.php" role="button">Skip</a>
 
                             <?php
                             if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($_POST['name'] == 'test' && $_POST['password'] == 'test')) {
