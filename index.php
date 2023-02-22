@@ -1,17 +1,9 @@
 <?php 
-    require_once('users.php'); 
-    $logged_in = false;
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $old_f5_check = $new_f5_check;
-    } else {
-        $old_f5_check = random_int(1, 100);
-    }
-
+    require_once(__DIR__.'/config.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="<?php echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);?>">
+<html lang="<?php echo $lang;?>">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,37 +36,7 @@
                 </div>
                 <div class="span-wrap">
                     <span class="message">
-                        <?php
-                            if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!$_POST['name'] && !$_POST['password'])) {
-                                // Empty inputs
-                                echo "Please enter values before submiting";
 
-                            } elseif (!$_POST['name'] && $_POST['password']) {
-                                echo "User not found";
-                            } elseif ($_POST['name'] && $_POST['password']) {
-
-                                if (array_key_exists($_POST['name'], $users)) {
-                                    // User found, checking for password
-
-                                    if (!$_POST['password']) {
-                                        echo "Password required";
-                                    } elseif ($_POST['password'] != $users[$_POST['name']]['password']) {
-                                        echo "Wrong password! Try again or <a href='#' style='color: #128be7'>skip it</a>.";
-                                    } else {
-                                        $logged_in = true;
-                                        echo "Logged in";
-                                    }
-                                } else {
-                                    // User not found
-                                    echo "User not found";
-                                }
-                                
-                            }
-                            $new_f5_check = random_int(0, 100);
-                            unset($_POST);
-                            // echo $new_f5_check." - new <br>";
-                            // echo $old_f5_check." - old";
-                        ?>
                     </span>
                 </div>
                 <div class="social-icons-wrap">
@@ -88,8 +50,3 @@
     </main>
 </body>
 </html>
-<?php 
-
-    unset($_POST);
-
-?>
