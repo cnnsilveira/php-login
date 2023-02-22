@@ -28,14 +28,14 @@
                         <input type="password" name="password" placeholder="Password" autocomplete="off">
                         <div class="btn-wrap">
                             <input type="submit" value="Log In">
-                            <a href="<?php echo $_SERVER['DOCUMENT_ROOT'].'/redirect.php';?>" role="button">Skip</a>
-                            <?php 
-                            
-                            if (($_SERVER['REQUEST_METHOD'] == 'POST') && ($_POST['name'] == 'Caio' && $_POST['password'] == 'cnshu3br')) {
+                            <a href="caionunes.site/redirected.php" role="button">Skip</a>
+
+                            <?php
+                            if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($_POST['name'] == 'test' && $_POST['password'] == 'test')) {
                                 $_SESSION['logged_in'] = true;
                             }
-                            
                             ?>
+
                         </div>
                     </form>
                 </div>
