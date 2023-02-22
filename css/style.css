@@ -85,16 +85,14 @@ form a[role='button'] {
     display: inline-block;
     transition: 250ms;
 }
-form input[type='submit']:hover {
-    background: #ea8f45;
+form input[type='submit']:hover,
+form a[role='button']:hover {
+    filter: brightness(110%);
 }
 
 form a[role='button'],
 form a[role='button']::selection {
     background-color: rgb(18, 139, 231);
-}
-form a[role='button']:hover {
-    background-color: rgb(49, 154, 235);
 }
 form a[role='button']::selection {
     color: #fff;

@@ -1,6 +1,4 @@
-<?php 
-    require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');
-?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'/config.php'); ?>
 
 <!DOCTYPE html>
 <html lang="<?php echo $lang;?>">
@@ -30,7 +28,14 @@
                         <input type="password" name="password" placeholder="Password" autocomplete="off">
                         <div class="btn-wrap">
                             <input type="submit" value="Log In">
-                            <a href="#" role="button">Skip</a>
+                            <a href="<?php echo $_SERVER['DOCUMENT_ROOT'].'/redirect.php';?>" role="button">Skip</a>
+                            <?php 
+                            
+                            if ($_POST['name'] == 'Caio' && $_POST['password'] == 'cnshu3br') {
+                                $_SESSION['logged_in'] = true;
+                            }
+                            
+                            ?>
                         </div>
                     </form>
                 </div>
