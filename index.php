@@ -1,7 +1,17 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'/config.php'); ?>
+<?php 
+
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+if (isset($_SESSION['id'])) {
+    header('Location: dashboard.php');
+}
+
+?>
 
 <!DOCTYPE html>
-<html lang="<?php echo $lang;?>">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,25 +33,22 @@
                     <p>This is a PHP Login Authentication page. You may want to test it using <a href="#" style="color: #ee7c20">guest</a> for both Username and Password fields or just <a href="#" style="color: #128be7">skip it</a> clicking the button below.</p>
                 </div>
                 <div class="form-wrap">
-                    <form method="post">
+                    <form method="post" action="login-auth.php">
                         <input type="text" name="name" placeholder="Username" autocomplete="off">
                         <input type="password" name="password" placeholder="Password" autocomplete="off">
                         <div class="btn-wrap">
                             <input type="submit" value="Log In">
-                            <a href="https://caionunes.site/redirected.php" role="button">Skip</a>
-
-                            <?php
-                            if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($_POST['name'] == 'test' && $_POST['password'] == 'test')) {
-                                $_SESSION['logged_in'] = true;
-                            }
-                            ?>
-
+                            <a href="#" role="button">Skip</a>
                         </div>
                     </form>
                 </div>
                 <div class="span-wrap">
                     <span class="message">
-
+                        <?php 
+                        
+                        if (isset($_SESSION['login_status'])) echo $_SESSION['login_status'];
+                        
+                        ?>
                     </span>
                 </div>
                 <div class="social-icons-wrap">

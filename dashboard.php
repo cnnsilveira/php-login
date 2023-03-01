@@ -1,20 +1,14 @@
-<?php
-
-require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');
-if (!$_SESSION['logged_in']) {
-    header('Location: https://caionunes.site');
-}
-
-?>
+<?php require_once('protect.php'); ?>
 
 <!DOCTYPE html>
-<html lang="<?php echo $lang; ?>">
+<html lang="en">
     <head>
-        <title>Test</title>
+        <title>Dashboard</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+        <span>Welcome back, <?php echo $_SESSION['name'];?></span>
         <a href="logout.php" style="color: #000;">Log out</a>
     </body>
 </html>
