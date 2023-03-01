@@ -1,6 +1,6 @@
 # <a href="https://phplogin.caionunes.dev/" target="_blank">PHP Login Auth</a> - Work in progress
 
-This is a PHP Login Authentication application. You can try it out accessing the link above or cloning my repository.
+This is a (still under development) PHP Login Authentication application. You can try it out accessing the link above or cloning my repository.
 If you're accessing through the link, use "guest" for both username and password.
 
 ### If you're cloning it:
@@ -9,7 +9,9 @@ Create a "users" table with "id", "username" and "password" columns in your data
 
 ##
 
-Essa é uma aplicação de Autenticação de Login em PHP. Você pode testar ela acessando o link do título ou clonando meu repositório.
+# <a href="https://phplogin.caionunes.dev/" target="_blank">PHP Login Auth</a> - Work in progress
+
+Essa é uma aplicação de Autenticação de Login em PHP (ainda em desenvolvimento). Você pode testar ela acessando o link do título ou clonando meu repositório.
 Caso acesse pelo link, use "guest" para usuário e para senha.
 
 ### Caso queira clonar o repositório:
