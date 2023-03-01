@@ -9,7 +9,7 @@ Create a "users" table with "id", "username" and "password" columns in your data
 
 ##
 
-# <a href="https://phplogin.caionunes.dev/" target="_blank">PHP Login Auth</a> - Work in progress
+#### PT-BR
 
 Essa é uma aplicação de Autenticação de Login em PHP (ainda em desenvolvimento). Você pode testar ela acessando o link do título ou clonando meu repositório.
 Caso acesse pelo link, use "guest" para usuário e para senha.
