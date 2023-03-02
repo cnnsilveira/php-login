@@ -31,15 +31,15 @@ if (isset($_SESSION['id'])) {
                 <div class="login-container-inner">
                     <div class="welcome-wrap">
                         <h1>Welcome!</h1>
-                        <p>This is a (still under development) PHP Login Authentication application. You may want to test it using <a href="#" style="color: #ee7c20">guest</a> for both Username and Password fields or <a href="#" style="color: #128be7">register</a>.</p>
+                        <p>This is a (still under development) PHP Login Authentication application. You may want to test it using <a href="#" style="color: #128be7">guest</a> for both Username and Password fields or <a href="#" style="color: #ee7c20">register</a>.</p>
                     </div>
                     <div class="form-wrap">
                         <form method="post" action="config/login-auth.php">
                             <input type="text" name="name" placeholder="Username" autocomplete="off">
                             <input type="password" name="password" placeholder="Password" autocomplete="off">
                             <div class="btn-wrap">
-                                <input type="submit" value="Log In" class="orange-bg">
-                                <a href="#" role="button" class="blue-bg">Register</a>
+                                <input type="submit" value="Log In" class="blue-bg">
+                                <a href="#" role="button" class="orange-bg">Register</a>
                             </div>
                         </form>
                     </div>
