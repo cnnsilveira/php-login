@@ -1,0 +1,32 @@
+*::selection {
+    background-color: #fff;
+    color: #333;
+}
+
+/* ** Content Start ** */
+
+article {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 50px;
+    height: calc(100dvh - 70px);
+}
+.content-wrap {
+    margin: 0 auto;
+    background: #333;
+    padding: 50px;
+    text-align: center;
+}
+.content-wrap > div {
+    max-width: 800px;
+}
+.content-wrap h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+.content-wrap p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 300;
+}

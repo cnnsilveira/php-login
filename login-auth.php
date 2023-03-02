@@ -12,13 +12,13 @@ if (isset($_POST['name']) || isset($_POST['password'])) {
 
         $_SESSION['login_status'] = 'Please fill the username field.';
 
-        header('Location: index.php');
+        header('Location: login.php');
 
     } else if (strlen($_POST['password']) == 0) {
 
         $_SESSION['login_status'] = 'Please fill the password field.';
         
-        header('Location: index.php');
+        header('Location: login.php');
 
     } else {
 
@@ -26,7 +26,7 @@ if (isset($_POST['name']) || isset($_POST['password'])) {
         $password = $mysqli->real_escape_string($_POST['password']);
 
         $sql_code = "SELECT * FROM users WHERE username = '$name' AND password = '$password'";
-        $sql_query = $mysqli->query($sql_code) or die("Falha na execução".$mysqli->error);
+        $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 
         if ($sql_query->num_rows) {
 
@@ -41,7 +41,7 @@ if (isset($_POST['name']) || isset($_POST['password'])) {
 
             $_SESSION['login_status'] = 'Wrong username or password.';
 
-            header('Location: index.php');
+            header('Location: login.php');
 
         }
 

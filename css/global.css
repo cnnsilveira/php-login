@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+h1 {
+    font-size: 4.5rem;
+}
+p {
+    font-size: .9rem;
+    line-height: 1.5rem;
+}
+a {
+    text-decoration: none;
+}
+.centered-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background: #333;
+    width: 100%;
+    height: 70px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+.header-content {
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+.header-content span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: #333;
+    transition: 1s;
+}
+.header-content .js-welcome-second {
+    padding: 0 8px;
+    position: absolute;
+}
+.header-content a[role="button"]:first-child {
+    margin-right: 10px;
+}
+.header-content a[role="button"] {
+    padding: 15px 15px;
+}
+
+
+input[type='submit'],
+a[role='button'] {
+    padding: 15px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    display: inline-block;
+    transition: 250ms;
+}
+a[role='button'] {
+    user-select: none;
+}
+.bg-container {
+    background:url('../img/login-bg.jpg') -25px -50px;
+    background-color: #33333390;
+    background-blend-mode: multiply;
+    position:fixed;
+    left: 0;
+    top:0;
+    width:100%;
+    z-index:-1;
+    height:100%;
+    background-size: calc(100% + 50px);
+}
+.orange-bg {
+    background-color: #ee7c20;
+}
+.blue-bg {
+    background-color: rgb(18, 139, 231);
+}
+.orange-bg:hover,
+.blue-bg:hover {
+    filter: brightness(110%);
+}
