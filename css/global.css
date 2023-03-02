@@ -6,6 +6,10 @@
     margin: 0;
     color: #fff;
 }
+*::selection {
+    background-color: #fff;
+    color: #333;
+}
 h1 {
     font-size: 4.5rem;
 }
