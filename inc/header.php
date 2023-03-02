@@ -1,7 +1,7 @@
 <header>
     <div class="header-content">
         <div class="welcome-wrap">
-            <span class="js-welcome-first">Welcome, </span><span class="js-welcome-second"><?php echo isset($_SESSION['id']) ? $_SESSION['name'] : 'Stranger' ?></span>
+            <span class="js-welcome-first">Welcome, </span><span class="js-welcome-second"><?php echo isset($_SESSION['id']) ? $_SESSION['name'] : 'John Doe' ?></span>
         </div>
         <div class="btn-wrap">
             <?php 
@@ -14,7 +14,7 @@
             <?php } else { ?>
 
                 <a href="<?php echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'index.php' :  'dashboard.php' ?>" role="button" class="blue-bg"><?php echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'Home' :  'Dashboard' ?></a>
-                <a href="logout.php" role="button" class="orange-bg">Log out</a>
+                <a href="config/logout.php" role="button" class="orange-bg">Log out</a>
 
             <?php } ?>
 

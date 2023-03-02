@@ -32,7 +32,7 @@ if (!isset($_SESSION)) {
     <script src="js/bg-effect.js"></script>
 </head>
 <body>
-    <?php require_once('header.php'); ?>
+    <?php require_once('inc/header.php'); ?>
     <main>
         <article class="centered-flex">
             <div class="bg-container"></div>

@@ -35,7 +35,7 @@ if (isset($_SESSION['id'])) {
                         <p>This is a (still under development) PHP Login Authentication application. You may want to test it using <a href="#" style="color: #ee7c20">guest</a> for both Username and Password fields or <a href="#" style="color: #128be7">register</a>.</p>
                     </div>
                     <div class="form-wrap">
-                        <form method="post" action="login-auth.php">
+                        <form method="post" action="config/login-auth.php">
                             <input type="text" name="name" placeholder="Username" autocomplete="off">
                             <input type="password" name="password" placeholder="Password" autocomplete="off">
                             <div class="btn-wrap">

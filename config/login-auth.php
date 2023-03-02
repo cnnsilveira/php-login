@@ -12,13 +12,13 @@ if (isset($_POST['name']) || isset($_POST['password'])) {
 
         $_SESSION['login_status'] = 'Please fill the username field.';
 
-        header('Location: login.php');
+        header('Location: ../login.php');
 
     } else if (strlen($_POST['password']) == 0) {
 
         $_SESSION['login_status'] = 'Please fill the password field.';
         
-        header('Location: login.php');
+        header('Location: ../login.php');
 
     } else {
 
@@ -35,13 +35,13 @@ if (isset($_POST['name']) || isset($_POST['password'])) {
             $_SESSION['id'] = $user['id'];
             $_SESSION['name'] = $user['name'];
 
-            header('Location: dashboard.php');
+            header('Location: ../dashboard.php');
 
         } else {
 
             $_SESSION['login_status'] = 'Wrong username or password.';
 
-            header('Location: login.php');
+            header('Location: ../login.php');
 
         }
 
