@@ -1,12 +1,11 @@
-// Background effect
-
 $(document).ready(() => {
-
+    // Background effect
     var movementStrength = 25;
     var height = movementStrength / $(window).height();
     var width = movementStrength / $(window).width();
 
     $(window).mousemove((e) => {
+
         var pageX = e.pageX - ($(window).width() / 2);
         var pageY = e.pageY - ($(window).height() / 2);
         var newValueX = width * pageX * -1 - 25;
@@ -15,28 +14,24 @@ $(document).ready(() => {
 
     });
 
-});
 
 
-
-// Header 'Welcome' effect
-
-$(document).ready(setTimeout(() => {
-
-    $('.js-welcome-first').css({'visibility': 'hidden'});
-
-    const secondEl = $('.js-welcome-second');
-    secondEl.animate({left:'10px'}, 350);
+    // Header 'Welcome' effect
     setTimeout(() => {
-        secondEl.css({'padding': '0'});
-    }, 500);
 
-}, 1000));
+        $('.js-welcome-first').css({'visibility': 'hidden'});
+
+        const secondEl = $('.js-welcome-second');
+        secondEl.animate({left:'5px'}, 350);
+        setTimeout(() => {
+            secondEl.css({'padding': '0'});
+        }, 500);
+
+    }, 1000)
 
 
 
-// Form fill
+    // Form fill
+    // ***
 
-$(document).ready(() => {
-    
 });
