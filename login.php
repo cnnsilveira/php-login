@@ -19,7 +19,7 @@ if (isset($_SESSION['id'])) {
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/login.css">
     <script src="https://kit.fontawesome.com/13ca972e4c.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="js/script.js"></script>
     <title>Login</title>
 </head>
@@ -31,12 +31,12 @@ if (isset($_SESSION['id'])) {
                 <div class="login-container-inner">
                     <div class="welcome-wrap">
                         <h1>Welcome!</h1>
-                        <p>This is a (still under development) PHP Login Authentication application. You may want to test it using <a href="#" style="color: #128be7">guest</a> for both Username and Password fields or <a href="#" style="color: #ee7c20">register</a>.</p>
+                        <p>This is a (still under development) PHP Login Authentication application. You may want to test it using <span class="js-form-fill" style="color: #128be7; cursor: pointer">guest</span> for both Username and Password fields or <span style="color: #ee7c20">register</span>.</p>
                     </div>
                     <div class="form-wrap">
                         <form method="post" action="config/login-auth.php">
-                            <input type="text" name="name" placeholder="Username" autocomplete="off">
-                            <input type="password" name="password" placeholder="Password" autocomplete="off">
+                            <input id="js-name-el" type="text" name="name" placeholder="Username" autocomplete="off">
+                            <input id="js-pass-el" type="password" name="password" placeholder="Password" autocomplete="off">
                             <div class="btn-wrap">
                                 <input type="submit" value="Log In" class="blue-bg">
                                 <a href="#" role="button" class="orange-bg">Register</a>
