@@ -5,7 +5,7 @@ If you're accessing through the link, use "guest" for both username and password
 
 ### If you're cloning it:
 
-Create a "users" table with "id", "username" and "password" columns in your database. Then, configure 'change-this.php'.
+Create a "users" table with "id", "username" and "password" columns in your database. Then, configure the ```config/change-this.php``` file.
 
 ##
 
@@ -16,4 +16,4 @@ Caso acesse pelo link, use "guest" para usuário e para senha.
 
 ### Caso queira clonar o repositório:
 
-No seu banco de dados, crie uma tabela com o nome "users" que contenha as colunas "id", "username" e "password". Depois, configure o arquivo 'change-this.php'.
+No seu banco de dados, crie uma tabela com o nome "users" que contenha as colunas "id", "username" e "password". Depois, configure o arquivo ```config/change-this.php``` file.
