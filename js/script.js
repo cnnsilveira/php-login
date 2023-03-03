@@ -32,6 +32,9 @@ $(document).ready(() => {
 
 
     // Form fill
-    // ***
+    $('.js-form-fill').click(() => {
+        $('#js-name-el').val('guest');
+        $('#js-pass-el').val('guest');
+    });
 
 });
